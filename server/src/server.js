@@ -3,7 +3,7 @@ const app = require('./app');
 
 const { loadPlanetsData } = require('./models/planets.model');
 
-const PORT = 8001;
+const PORT = 3001;
 
 const server = http.createServer(app);
 
