@@ -16,6 +16,27 @@ launches.set(launch.flightNumber, launch);
 // Get the launch
 // launches.get(100);
 
+let latesFlightNumber = 100;
+
+function getAllLaunches() {
+    return Array.from(launches.values());
+}
+
+// Add a new launch
+function addNewLaunch(launch) {
+    latesFlightNumber++;
+    launches.set(
+        latesFlightNumber, 
+        Object.assign(launch, {
+            upcoming: true,
+            success: true,
+            customers: ['ZTM', 'NASA'],
+            flightNumber: latesFlightNumber,
+        }));
+}
+
 module.exports = {
+    // getAllLaunches, << not working
     launches,
+    addNewLaunch
 }
